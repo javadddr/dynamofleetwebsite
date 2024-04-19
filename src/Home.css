@@ -38,7 +38,7 @@
 .herotext p{
   color: rgb(255, 255, 255);
 
-    font-size: 1.225rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 110%;
 }
@@ -64,8 +64,8 @@ padding-right: 30px;
     background-color: #1649CF;;
     color: #fff;
     text-align: center;
-    padding: 0.75rem 3rem;
-    font-size: 1.3rem;
+    padding: 7px 19px;
+    font-size: 16px;
     font-weight: 500;
     border: none;
     border-radius: 4px;
@@ -111,14 +111,14 @@ padding-right: 10px;
 .textofgif h1{
   color: rgb(255, 255, 255);
   letter-spacing: -.1rem;
-    font-size: 3.425rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 110%;
     font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .subvhhomehere{
   font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.1rem;
+  font-size: 13px;
   margin-left: 5%;
   color: rgb(225, 228, 7);
 }
@@ -140,6 +140,7 @@ padding-right: 10px;
 }
 .titlevch p{
   color: aquamarine;
+  font-size: 16px;
 }
 .textofgif p{
   font-size: 1.2rem;
