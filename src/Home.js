@@ -5,7 +5,7 @@ import './Home.css';
 import hd from "./hd.png"; // Importing the image
 import vgif from "./v.gif"
 import check from "./c.png"
-
+import cost from "./cofwas.png"
 import df from "./df.png"
 import nbad from "./nbad.png"
 import finpp from "./finpp.png"
@@ -103,6 +103,17 @@ function Home() {
        
 
        </div>
+       <div className='HeroHomegg'>
+          <div className='herotext'>
+          
+            <h1 >Keep track of your expenses and identify areas of waste.</h1>
+            <p>You have the ability to assign invoices and equipment to your vehicles, as well as drivers, and monitor the costs associated with each driver or vehicle. This enables you to identify what incurs the highest costs, allowing you to effectively reduce waste and optimize your resources.</p>
+           
+          </div>
+          <div className='heropicp'>
+            <img src={cost} alt="Descriptive Alt Text" />
+          </div>
+        </div>
        <div className='HeroHomegg'>
           <div className='herotext'>
           

@@ -76,6 +76,23 @@ padding-right: 30px;
   box-shadow: rgba(210, 210, 222, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 }
+
+.heropicp {
+  flex: 2; /* Takes up 4 parts of the flex container */
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+
+padding-right: 30px;
+}
+
+.heropicp img {
+  width: 50%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Restrict maximum width to parent container */
+  box-shadow: rgba(210, 210, 222, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
 .bdmoma{
  
     background-color: #1649CF;;
