@@ -109,8 +109,9 @@ margin-left: 10px;
 }
 .topnote span{
   color: #086229;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  font-family:'inter','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .tf span{
   color: #086229;
