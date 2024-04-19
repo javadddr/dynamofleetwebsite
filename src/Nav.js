@@ -12,10 +12,10 @@ function Nav() {
 
   return (
     <nav className="navbar">
-      <div className="nav-brand">
+        <Link to="/" className="nav-brand" onClick={closeMenu}>
         <img src={logo} alt="DynamoFleet logo" className="logo" />
         <span className="brand-name">DynamoFleet</span>
-      </div>
+      </Link>
       <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         {/* Hamburger Icon */}
         &#9776;

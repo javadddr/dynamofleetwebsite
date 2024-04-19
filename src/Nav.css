@@ -14,6 +14,7 @@ html, body {
 .nav-brand{
   display: flex;
   margin-left: 30px;
+  text-decoration: none;
 }
 
 .brand-name {
@@ -22,6 +23,7 @@ html, body {
   font-weight: 500;
   align-self: center; 
   font-family: 'Muli', sans-serif; 
+  text-decoration: none;
 }
 .navbar {
   background-color: #00003C; 
