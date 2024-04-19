@@ -30,7 +30,7 @@ function Home() {
         <div className='gifveh'>
           <div className='textofgif'>
            
-          <h1> KEEP TABS ON YOUR VEHICLES.</h1>
+          <h1> Keep tabs on your vehicles.</h1>
           <div className='titlevch'>  <img src={check} alt="Check Icon" /> 
             <p>Extremely User-Friendly:</p>
             </div>
@@ -81,7 +81,7 @@ function Home() {
         </div>
         <div className='driversstatusi'>
        
-        <div className='texfordfdr'>CLOSELY MONITOR EACH STEP AND EVERY CHANGE.  </div>
+        <div className='texfordfdr'>Closely monitor each step and every change.</div>
         <div className='subtexfordfdr'>Enhance your oversight by meticulously measuring all steps and changes. Monitor your drivers' status and analyze your fleet's performance to make informed decisions. Allocate workloads based on driver performance to optimize efficiency.</div>
       
         <div className='picordfdr'>
@@ -93,7 +93,7 @@ function Home() {
         </div>
         <div className='driversstatusi'>
        
-       <div className='texfordfdr'>MAINTAIN CLOSE MONITORING OF YOUR FLEET'S HEALTH.</div>
+       <div className='texfordfdr'>Maintain close monitoring of your fleet's health.</div>
        <div className='subtexfordfdr'>Ensure your fleet remains in optimal condition by tracking the times it is most efficient and identifying any factors that may hinder its performance. Keep all necessary information at your fingertips to maintain smooth and seamless fleet operations.</div>
      
        <div className='picordfdr1234'>
@@ -110,7 +110,7 @@ function Home() {
             <p>Efficiently manage your fines, create and assign equipment to vehicles and drivers, define operational areas, and monitor your fleet based on these designated zones.</p>
             <button className='bdmoma'>Book a demo</button>
           </div>
-          <div className='heropic'>
+          <div className='heropico'>
             <img src={finpp} alt="Descriptive Alt Text" />
           </div>
         </div>

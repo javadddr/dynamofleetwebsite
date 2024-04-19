@@ -59,6 +59,23 @@ padding-right: 30px;
   box-shadow: rgba(210, 210, 222, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 }
+
+.heropico {
+  flex: 2; /* Takes up 4 parts of the flex container */
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+
+padding-right: 30px;
+}
+
+.heropico img {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Restrict maximum width to parent container */
+  box-shadow: rgba(210, 210, 222, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
 .bdmoma{
  
     background-color: #1649CF;;
@@ -120,7 +137,7 @@ padding-right: 10px;
   font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 13px;
   margin-left: 5%;
-  color: rgb(225, 228, 7);
+  color: rgb(255, 255, 255);
 }
 .textofgif img {
   display: block; /* Ensures the image does not align inline with text */
@@ -140,7 +157,7 @@ padding-right: 10px;
 }
 .titlevch p{
   color: aquamarine;
-  font-size: 15px;
+  font-size: 14px;
 }
 .textofgif p{
   font-size: 1.2rem;
@@ -222,7 +239,7 @@ flex: 2;
   flex: 1;
   margin-left: 15%;
   font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: linear-gradient(to right, #16d422, #00a8ff, #d42283, #8317b1); /* Gradient transitions from green to blue, to pink, to deep purple */
   -webkit-background-clip: text;
   background-clip: text;
