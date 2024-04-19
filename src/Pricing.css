@@ -11,7 +11,7 @@
 }
 .rangvp{
   color: white;
-  font-size: 1.7rem;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 .pmain2 {
@@ -25,8 +25,11 @@
 }
 .disprichishode{
   color: white;
-  font-size: 1.4rem;
+  font-size: 19px;
   margin-top: 180px;
+}
+.checkm{
+  font-size: 13px;
 }
 
 .cards {
@@ -43,6 +46,7 @@
 }
 .topnote h1{
   color: blue;
+  font-size: 26px;
 }
 .prititin1{
   display: flex;
@@ -114,8 +118,8 @@ margin-left: 10px;
   font-weight: bold;
 }
 .forfree button {
-  font-size: 1.2rem;
-  padding: 10px 15px;
+  font-size: 14px;
+  padding: 8px 13px;
   background-color: #113b12;
   color: #fff;
   border: none;
