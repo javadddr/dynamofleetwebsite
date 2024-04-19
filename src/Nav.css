@@ -19,7 +19,7 @@ html, body {
 
 .brand-name {
   color: #FFFFFF;
-  font-size: 1.5rem; 
+  font-size: 19px; 
   font-weight: 500;
   align-self: center; 
   font-family: 'Muli', sans-serif; 
@@ -31,7 +31,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0px;
+  padding: 15px 0px;
   margin-right: 20px;
   
 }
@@ -44,7 +44,7 @@ html, body {
   color: #FFFFFF;
   margin: 0 15px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
   transition: color 0.3s;
   font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   transition: color 0.3s, transform 0.3s; 
@@ -68,7 +68,7 @@ html, body {
   color: #FFFFFF;
   border: none;
  
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -86,8 +86,8 @@ html, body {
   background-color: #1649CF;
   color: #fff;
   text-align: center;
-  padding: 0.65rem 1.4rem;
-  font-size: 1.2rem;
+  padding: 9px 15px;
+  font-size: 20px;
   font-weight: 500;
   transition: background-color .3s;
   margin-right: 60px;
