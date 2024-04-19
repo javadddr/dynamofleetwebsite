@@ -7,7 +7,7 @@ html, body {
   width: 100%;
 }
 .logo {
-  height: 50px; 
+  height: 40px; 
   width: auto;
   margin-right: 10px; 
 }
@@ -63,12 +63,12 @@ html, body {
 }
 
 .nav-buttonoooo {
-  padding: 0.65rem 1.4rem;
+  padding: 8px 12px;
   background-color: transparent; 
   color: #FFFFFF;
   border: none;
  
-  font-size: 1rem;
+  font-size: 16px;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
