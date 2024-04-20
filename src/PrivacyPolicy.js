@@ -1,24 +1,24 @@
 import React from 'react';
 import Nav from './Nav';  // Importing Nav component
 import Footer from './Footer';  // Importing Footer component
-
+import "./PrivacyPolicy.css"
 function PrivacyPolicy() {
   return (
     <div>
       <Nav />
-      <div>
-      <p>Privacy policy</p>
+      <div className='goppmain'>
+      <h1>Privacy policy</h1>
 
 <p>Der Verantwortliche (&#8222;wir&ldquo;) im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die:</p>
 
 <p>DynamoChart UG Holzheimer Weg 11 41464 Neuss Germany</p>
 
-<p>Telefon: (+49) 1515 6338464 E-Mail: datenschutz@globalpackagetracker.com</p>
+<p>Telefon: (+49) 1515 6338464 E-Mail: datenschutz@dynamofleet.com</p>
 
 <p> Additional Google spreadsheet add-on Privacy policy:</p>
 
 <p>(App&rsquo;s) use and transfer to any other app of information received from Google APIs will adhere to Google API Services User Data Policy, including the Limited Use requirements</p>
-<p>Information &uuml;ber die Erhebung personenbezogener Daten</p>
+<h1>Information &uuml;ber die Erhebung personenbezogener Daten</h1>
 
 <p>Im Folgenden informieren wir &uuml;ber die Erhebung personenbezogener Daten bei Nutzung unserer Website,webapp und excel addin, oder unsere weitere product. Personenbezogene Daten sind alle Daten, die auf Sie pers&ouml;nlich beziehbar sind, z.&#8201;B. Name, Adresse, E-Mail-Adressen, Nutzerverhalten, und alle Informationen, die Sie innerhalb unserer Produkte (wie Webapp und Excel Addin) &uuml;ber Ihre Sendungsinformationen (Tracking-Nummern, Carrier und alle zus&auml;tzlichen Informationen, die Sie w&auml;hrend der Nutzung unserer Produkte eingeben.</p>
 
@@ -26,7 +26,7 @@ function PrivacyPolicy() {
 
 <p>Falls wir f&uuml;r einzelne Funktionen unseres Angebots auf beauftragte Dienstleister zur&uuml;ckgreifen oder Ihre Daten f&uuml;r werbliche Zwecke nutzen m&ouml;chten, werden wir Sie untenstehend im Detail &uuml;ber die jeweiligen Vorg&auml;nge informieren. Dabei nennen wir auch die festgelegten Kriterien der Speicherdauer.</p>
 
-<p>Ihre Rechte</p>
+<h1>Ihre Rechte</h1>
 
 <p>Sie haben gegen&uuml;ber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten: &#8205; Recht auf Auskunft Recht auf Berichtigung oder L&ouml;schung Recht auf Einschr&auml;nkung der Verarbeitung Recht auf Widerspruch gegen die Verarbeitung Recht auf Daten&uuml;bertragbarkeit</p>
 
@@ -39,13 +39,13 @@ function PrivacyPolicy() {
 
 <p>Zus&auml;tzlich zu den zuvor genannten Daten werden bei Ihrer Nutzung unserer Website Cookies auf Ihrem Rechner gespeichert. Bei Cookies handelt es sich um kleine Textdateien, die auf Ihrer Festplatte dem von Ihnen verwendeten Browser zugeordnet gespeichert werden und durch welche der Stelle, die den Cookie setzt (hier durch uns), bestimmte Informationen zuflie&szlig;en. Cookies k&ouml;nnen keine Programme ausf&uuml;hren oder Viren auf Ihren Computer &uuml;bertragen. Sie dienen dazu, das Internetangebot insgesamt nutzerfreundlicher und effektiver zu machen.</p>
 
-<p> Einsatz von Cookies:</p>
+<h1> Einsatz von Cookies:</h1>
 
 <p>Diese Website nutzt folgende Arten von Cookies, deren Umfang und Funktionsweise im Folgenden erl&auml;utert werden: Transiente Cookies (dazu b) Persistente Cookies (dazu c). Transiente Cookies werden automatisiert gel&ouml;scht, wenn Sie den Browser schlie&szlig;en. Dazu z&auml;hlen insbesondere die Session-Cookies. Diese speichern eine sogenannte Session-ID, mit welcher sich verschiedene Anfragen Ihres Browsers der gemeinsamen Sitzung zuordnen lassen. Dadurch kann Ihr Rechner wiedererkannt werden, wenn Sie auf unsere Website zur&uuml;ckkehren. Die Session-Cookies werden gel&ouml;scht, wenn Sie sich ausloggen oder den Browser schlie&szlig;en. Persistente Cookies werden automatisiert nach einer vorgegebenen Dauer gel&ouml;scht, die sich je nach Cookie unterscheiden kann. Sie k&ouml;nnen die Cookies in den Sicherheitseinstellungen Ihres Browsers jederzeit l&ouml;schen. Sie k&ouml;nnen Ihre Browser-Einstellung entsprechend Ihren W&uuml;nschen konfigurieren und z.B. die Annahme von Third-Party-Cookies oder allen Cookies ablehnen. Wir weisen Sie darauf hin, dass Sie eventuell nicht alle Funktionen dieser Website nutzen k&ouml;nnen.</p>
 
 <p> Unser Produkt ist eine Webanwendung, die es Ihnen erm&ouml;glicht, Ihre Sendungen und Pakete vom Versand bis zur Auslieferung zu verfolgen, und Sie k&ouml;nnen, wenn Sie m&ouml;chten, das Gewicht und die Kosten der Pakete hinzuf&uuml;gen und am Ende k&ouml;nnen Sie von unserem Dashboard profitieren, das Ihnen den Versandprozess und die Versandkosten sowie die Transitzeit und vieles mehr anzeigt (diese Informationen werden von Ihnen eingegeben, w&auml;hrend Sie unsere App verwenden und nicht &uuml;ber unsere Website).</p>
 
-<p> Einsatz von Google Analytics</p>
+<h1> Einsatz von Google Analytics</h1>
 
 <p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (&#8222;Google&ldquo;). Google Analytics verwendet sog. &#8222;Cookies&ldquo;, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie erm&ouml;glichen. Die durch den Cookie erzeugten Informationen &uuml;ber Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA &uuml;bertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europ&auml;ischen Union oder in anderen Vertragsstaaten des Abkommens &uuml;ber den Europ&auml;ischen Wirtschaftsraum zuvor gek&uuml;rzt. Nur in Ausnahmef&auml;llen wird die volle IP-Adresse an einen Server von Google in den USA &uuml;bertragen und dort gek&uuml;rzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports &uuml;ber die Website-Aktivit&auml;ten zusammenzustellen und um weitere mit der Website-Nutzung und der Internetnutzung verbundene Dienstleistungen gegen&uuml;ber dem Website-Betreiber zu erbringen.</p>
 
@@ -55,11 +55,11 @@ function PrivacyPolicy() {
 
 <p>Sie k&ouml;nnen die Erfassung durch Google Analytics verhindern, indem Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, das die zuk&uuml;nftige Erfassung Ihrer Daten beim Besuch unserer Seiten verhindert:</p>
 
-<p>Google Analytics deaktivieren</p>
+<h1>Google Analytics deaktivieren</h1>
 
 <p>Diese Website verwendet Google Analytics mit der Erweiterung &#8222;_anonymizeIp()&ldquo;. Dadurch werden IP-Adressen gek&uuml;rzt weiterverarbeitet, eine Personenbeziehbarkeit kann damit ausgeschlossen werden. Soweit den &uuml;ber Sie erhobenen Daten ein Personenbezug zukommt, wird dieser also sofort ausgeschlossen und die personenbezogenen Daten damit umgehend gel&ouml;scht. Wir nutzen Google Analytics, um die Nutzung unserer Website analysieren und regelm&auml;&szlig;ig verbessern zu k&ouml;nnen. &Uuml;ber die gewonnenen Statistiken k&ouml;nnen wir unser Angebot verbessern und f&uuml;r Sie als Nutzer interessanter ausgestalten. F&uuml;r die Ausnahmef&auml;lle, in denen personenbezogene Daten in die USA &uuml;bertragen werden, hat sich Google dem EU-US Privacy Shield unterworfen, https://www.privacyshield.gov/Program-Overview. Rechtsgrundlage f&uuml;r die Nutzung von Google Analytics ist Art. 6 Abs. 1 S. 1 lit. f DS-GVO. Informationen des Drittanbieters: Google Dublin, Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Ireland, Fax: +353 (1) 436 1001. Nutzerbedingungen: http://www.google.com/analytics/terms/de.html, &Uuml;bersicht zum Datenschutz: http://www.google.com/intl/de/analytics/learn/privacy.html, sowie die Datenschutzerkl&auml;rung: http://www.google.de/intl/de/policies/privacy.</p>
 
-<p>Google Adwords</p>
+<h1>Google Adwords</h1>
 
 <p>Wir nutzen das Angebot von Google Adwords, um mit Hilfe von Werbemitteln (sogenannten Google Adwords) auf externen Webseiten auf unsere attraktiven Angebote aufmerksam zu machen. Wir k&ouml;nnen in Relation zu den Daten der Werbekampagnen ermitteln, wie erfolgreich die einzelnen Werbema&szlig;nahmen sind. Wir verfolgen damit das Interesse, Ihnen Werbung anzuzeigen, die f&uuml;r Sie von Interesse ist, unsere Website f&uuml;r Sie interessanter zu gestalten und eine faire Berechnung von Werbe-Kosten zu erreichen.</p>
 
@@ -71,7 +71,7 @@ function PrivacyPolicy() {
 
 <p>Sie k&ouml;nnen die Teilnahme an diesem Tracking-Verfahren auf verschiedene Weise verhindern: a) durch eine entsprechende Einstellung Ihrer Browser-Software, insbesondere f&uuml;hrt die Unterdr&uuml;ckung von Drittcookies dazu, dass Sie keine Anzeigen von Drittanbietern erhalten; b) durch Deaktivierung der Cookies f&uuml;r Conversion-Tracking, indem Sie Ihren Browser so einstellen, dass Cookies von der Domain &#8222;www.googleadservices.com&ldquo; blockiert werden, https://www.google.de/settings/ads, wobei diese Einstellung gel&ouml;scht werden, wenn Sie Ihre Cookies l&ouml;schen; c) durch Deaktivierung der interessenbezogenen Anzeigen der Anbieter, die Teil der Selbstregulierungs-Kampagne &#8222;About Ads&ldquo; sind, &uuml;ber den Link https://optout.aboutads.info, wobei diese Einstellung gel&ouml;scht wird, wenn Sie Ihre Cookies l&ouml;schen; d) durch dauerhafte Deaktivierung in Ihren Browsern Firefox, Internetexplorer oder Google Chrome unter dem Link http://www.google.com/settings/ads/plugin. Wir weisen Sie darauf hin, dass Sie in diesem Fall gegebenenfalls nicht alle Funktionen dieses Angebots vollumf&auml;nglich nutzen k&ouml;nnen. https://optout.aboutads.info/?c=2&amp;lang=ENRechtsgrundlage f&uuml;r die Verarbeitung Ihrer Daten ist Art. 6 Abs. 1 S. 1 lit. f DS-GVO. Weitere Informationen zum Datenschutz bei Google finden Sie hier: http://www.google.com/intl/de/policies/privacy und https://services.google.com/sitestats/de.html. Alternativ k&ouml;nnen Sie die Webseite der Network Advertising Initiative (NAI) unter https://thenai.org/ besuchen. Google hat sich dem EU-US Privacy Shield unterworfen, https://www.privacyshield.gov/Program-Overview.</p>
 
-<p>Updating this privacy policy</p>
+<h1>Updating this privacy policy</h1>
 
 <p>We reserve the right to update this privacy policy as necessary to adapt it to technical developments or in connection with the offer of new services or products. You can always view the current version on the website.</p>
       </div>
