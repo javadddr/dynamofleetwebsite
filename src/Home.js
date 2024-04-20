@@ -114,6 +114,12 @@ function Home() {
             <img src={cost} alt="Descriptive Alt Text" />
           </div>
         </div>
+   
+         
+          <div className='heropicpop'>
+            <img src={cost} alt="Descriptive Alt Text" />
+          </div>
+        
        <div className='HeroHomegg'>
           <div className='herotext'>
           

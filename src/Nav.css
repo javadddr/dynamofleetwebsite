@@ -116,7 +116,7 @@ html, body {
     display: block;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 15px;
   }
 
   .nav-links {
@@ -158,6 +158,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
     padding: 20px;
+    padding-left: 0px;
     width: 100%; /* Make sure the navbar covers full width */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for depth */
   }

@@ -156,6 +156,9 @@ padding-right: 10px;
   margin-left: 5%;
   color: rgb(255, 255, 255);
 }
+.heropicpop{
+  display: none;
+}
 .textofgif img {
   display: block; /* Ensures the image does not align inline with text */
  /* Adds some space between the image and the text below it */
@@ -267,4 +270,69 @@ flex: 2;
   margin-right: 10%;
 }
 
+
+@media (max-width: 768px) {
+
+  .HeroHomegg{
+    padding-top: 0px;
+  }
+  .herotext{
+    padding-left: 30px;
+  }
+  .heropic img{
+    display: none;
+  }
+  .gifofgif{
+    display: none;
+  }
+  .titlevch p{
+    font-size: 17px;
+  }
+  .gifveh{
+    height: 600px;
+  }
+  .texfordfdr{
+    padding-top: 50px;
+ padding-left: 15px;
+  }
+  .subtexfordfdr{
+    margin: 20px;
+  }
+  .picordfdr img{
+    width: 90%;
+  }
+  .picordfdr1234 img{
+    width: 90%;
+  }
+  .heropicp {
+    display: none;
+  }
+  .heropico{
+    display: none;
+  }
+  .footer{
+    flex-direction: column;
+  }
+  .heropicpop{
+    display: flex;
+
+  }
+  .heropicpop img{
+    width: 100%;
+  }
+  .nav-buttonsddppp{
+    flex-direction: column;
+  }
+  .crtexthome{
+    margin-left: 10px;
+  }
+  .justbfor{
+    height: 40px;
+    justify-content: center;
+  }
+  .pmain2{
+    flex-direction: column;
+  }
+ 
+}
 
