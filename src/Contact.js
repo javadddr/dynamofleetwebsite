@@ -17,15 +17,13 @@ const Contact = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
   
-    // Check if required fields are empty
     if (!firstName || !lastName || !email || !message) {
-      // You might want to show an error message to the user here
+     
       return;
     }
   
     setIsLoading(true);
   
-    // Simulating an asynchronous request to store the message
     setTimeout(() => {
     const customerMessage = {
       firstName,
@@ -35,10 +33,10 @@ const Contact = () => {
       company,
       message,
     };
-      // Here you can perform your logic to store the customerMessage state
+      
       console.log(customerMessage);
   
-      // Send the customerMessage as a POST request
+      
       fetch('https://api.globalpackagetracker.com/contact', {
       method: 'POST',
       headers: {
@@ -60,7 +58,7 @@ const Contact = () => {
       setIsLoading(false);
         });
 
-      // Reset form fields
+    
       setFirstName('');
       setLastName('');
       setEmail('');
