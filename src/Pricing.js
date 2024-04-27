@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import "./Pricing.css"
 import Nav from './Nav'; // Importing Nav
 import Footer from './Footer'; // Importing Footer
 import dido from "./checkmark.png"
-
-
+import Slider from '@mui/material/Slider';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
 const pricingData = {
  
   "10": { monthly: "15,99", totalMonthly: "159", monthlyDiscount: "13,5", yearlyDiscount: "1620" },
@@ -19,55 +21,77 @@ const pricingData = {
   "300": { monthly: "7,99", totalMonthly: "2397", monthlyDiscount: "6,7", yearlyDiscount: "24120" },
   "400": { monthly: "6,99", totalMonthly: "2796", monthlyDiscount: "5,9", yearlyDiscount: "28320" },
   "500": { monthly: "5,99", totalMonthly: "2995", monthlyDiscount: "5", yearlyDiscount: "30000" },
-  "More than 500": { monthly: "Contact Us", totalMonthly: "Contact Us", monthlyDiscount: "Contact Us", yearlyDiscount: "Contact Us" }
+  "500+": { monthly: "Contact Us", totalMonthly: "Contact Us", monthlyDiscount: "Contact Us", yearlyDiscount: "Contact Us" }
 };
 const findPricingBracket = (capacity) => {
   if (capacity > 500) {
-    return "More than 500";
+    return "500+";
   }
   const brackets = [10, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500];
   const foundBracket = brackets.find(bracket => capacity <= bracket);
   return foundBracket.toString();
 };
 
+const IOSSlider = styled(Slider)(({ theme }) => ({
+  color: theme.palette.mode === 'dark' ? '#bfbfbf' : '#3880ff',
+  height: 8,
+  '& .MuiSlider-thumb': {
+    height: 24,
+    width: 24,
+    backgroundColor: '#fff',
+    boxShadow: theme.shadows[6],
+    '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
+      boxShadow: `0px 0px 0px 8px ${theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.16)' : 'rgba(24, 118, 255, 0.16)'}`,
+    },
+    '&.Mui-disabled': {
+      height: 24,
+      width: 24,
+    },
+  },
+  '& .MuiSlider-rail': {
+    opacity: 0.28,
+  },
+}));
+
 const Pricing = () => {
 
+  const [capacity, setCapacity] = useState(0);
   
-  const capacity = 30
  
+  const handleSliderChange = (event, newValue) => {
+    setCapacity(newValue);
+  };
 
   const bracketKey = findPricingBracket(capacity); 
   const selectedPricing = pricingData[bracketKey];
-  const token = localStorage.getItem('userToken');
+ 
 
-  const priod="none"  //monthly,yearly,none
 
-  const handleSubscribeClick = () => {
-    // Assuming 'userInfo' contains 'token' and 'userId'
-   
-  
-    if (!token ) {
-      console.error("User token or ID is missing!");
-      return; // Exit if no token or userId is available
-    }
-  
-    // Construct the URL with query parameters
-    const billingUrl = new URL('https://billing.dynamofleet.com');
-    billingUrl.searchParams.append('token', token);
-   
-    // Navigate to the billing page in the same tab with parameters
-    window.location.href = billingUrl.href;
-
-  };
 
   return (
    <div>
     <Nav/>
     <div className='pmain'>
       <div className='pmain2'>
-        <div>
+        <div className='planandcut'>
         <div className='disprichishode'>All of our plans include complete access to our platform. The only difference in pricing depends on how many vehicles you would like to manage using our platform.</div>
-        <div className='rangvp'>How many vehicles would you like to manage?</div>
+        <div className='rangvp'>
+        How many vehicles would you like to manage?
+        
+            <Box sx={{ width: '100%', paddingTop: '34px' }}>
+              <IOSSlider
+                aria-label="Vehicle Capacity"
+                defaultValue={30}
+                valueLabelDisplay="on"
+                step={1}
+                marks
+                min={0}
+                max={501}
+                value={capacity}
+                onChange={handleSliderChange}
+              />
+            </Box>
+            </div>
         <div className='planicuroft'>
         Your plan will be:
         </div>
@@ -81,20 +105,20 @@ const Pricing = () => {
           }}>
           <thead>
             <tr>
-              <th style={{  padding: '8px', background: '#0A0A8C',color:"white", height: '20px',border: "1px solid white" }}>Plan</th>
-              <th style={{  padding: '8px', background: '#0A0A8C',color:"white", height: '20px',border: "1px solid white" }}>Cost Per vehicle if you pay monthly</th>
+              <th style={{  padding: '2px', background: '#0A0A8C',color:"white", height: '10px',border: "1px solid white" }}>Plan</th>
+              <th style={{  padding: '2px', background: '#0A0A8C',color:"white", height: '10px',border: "1px solid white" }}>Cost Per vehicle if you pay monthly</th>
              
-              <th style={{ padding: '8px', background: '#0A0A8C',color:"white", height: '20px' ,border: "1px solid white"}}>Cost Per vehicle if you pay yearly</th>
+              <th style={{ padding: '2px', background: '#0A0A8C',color:"white", height: '10px' ,border: "1px solid white"}}>Cost Per vehicle if you pay yearly</th>
             
             </tr>
           </thead>
           <tbody>
             {Object.entries(pricingData).map(([amount, details]) => (
               <tr key={amount} style={{ backgroundColor: amount === bracketKey ? 'rgb(183, 229, 188)' : 'transparent',color: amount === bracketKey ? 'black' : 'white', height: '20px' }}>
-                <td style={{ padding: '8px', textAlign: 'start', height: '20px',width:"190px" ,border: "1px solid rgb(206, 206, 206)" }}>Up to {amount} Vehicles</td>
-                <td style={{ padding: '8px', textAlign: 'center', height: '20px',border: "1px solid rgb(206, 206, 206)" }}>{details.monthly}</td>
+                <td style={{ padding: '4px', textAlign: 'start', height: '20px',width:"190px" ,border: "1px solid rgb(206, 206, 206)" }}>Up to {amount} Vehicles</td>
+                <td style={{ padding: '4px', textAlign: 'center', height: '20px',border: "1px solid rgb(206, 206, 206)" }}>{details.monthly}</td>
              
-                <td style={{  padding: '8px', textAlign: 'center', height: '20px',border: "1px solid rgb(206, 206, 206)"}}>{details.monthlyDiscount}</td>
+                <td style={{  padding: '4px', textAlign: 'center', height: '20px',border: "1px solid rgb(206, 206, 206)"}}>{details.monthlyDiscount}</td>
                
               </tr>
             ))}
@@ -158,7 +182,7 @@ const Pricing = () => {
           </div>
           <div className='forfree1'>
          
-  <button className='linkmainsdrr' onClick={handleSubscribeClick}>Upgrade Your Plan</button>
+  <button className='linkmainsdrr' >Upgrade Your Plan</button>
 
 
 </div>
@@ -171,7 +195,7 @@ const Pricing = () => {
          
             <h1 id='justhdes'>Monthly</h1>
             <div className='prititin'>
-              <div className='prititin1'> <h1><span>{selectedPricing.monthly !== "N/A" ? "\u0024" : ""}  {selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"}</span></h1><p>{selectedPricing.monthly !== "N/A" ? " Per vehicle /per month" : ""}</p></div>
+              {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthly !== "N/A" ? "\u0024" : ""}  {selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"}</span></h1><p>{selectedPricing.monthly !== "N/A" ? " Per vehicle /per month" : ""}</p></div>}
               
                <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {capacity* parseInt((selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"))}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>
               
@@ -230,7 +254,7 @@ const Pricing = () => {
             </div>
           </div>
           <div className='forfree'>
-          <button className='linkmainsdrr' onClick={handleSubscribeClick}>Upgrade Your Plan</button>
+          <button className='linkmainsdrr' >Upgrade Your Plan</button>
            
           </div>
           <div className="greenSquare"></div>
@@ -241,7 +265,7 @@ const Pricing = () => {
          
         <h1 id='justhdes'>Annually</h1>
          <div className='prititin'>
-           <div className='prititin1'> <h1><span>{selectedPricing.monthlyDiscount !== "N/A" ? "\u0024" : ""} {selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"} </span></h1><p> {selectedPricing.monthlyDiscount !== "N/A" ? " Per vehicle /per month" : ""}</p></div>
+           {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthlyDiscount !== "N/A" ? "\u0024" : ""} {selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"} </span></h1><p> {selectedPricing.monthlyDiscount !== "N/A" ? " Per vehicle /per month" : ""}</p></div>}
            
             <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(capacity* parseInt(selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"))*12}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>
         
@@ -302,7 +326,7 @@ const Pricing = () => {
           
           </div>
           <div className='forfree'>
-          <button className='linkmainsdrr' onClick={handleSubscribeClick}>Upgrade Your Plan</button>
+          <button className='linkmainsdrr' >Upgrade Your Plan</button>
            
           </div>
           <div className="greenSquare"></div>

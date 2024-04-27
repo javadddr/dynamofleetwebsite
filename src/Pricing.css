@@ -11,9 +11,10 @@
 }
 .rangvp{
   color: white;
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 26px;
+  margin-bottom: 0px;
 }
+
 .pmain2 {
 
   background: #0F0F47;
@@ -205,8 +206,8 @@ margin-left: 10px;
   display: flex;
   flex-direction: column;
 height: 750px;
-  width:350px;
-  min-width:350px;
+  width:270px;
+  min-width:270px;
   border: 1px solid black;
   padding: 20px;
   justify-content: space-evenly;
@@ -217,6 +218,10 @@ height: 750px;
   overflow: hidden; /* Add this line to hide the overflow */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+.planandcut{
+  width:550px;
+  padding-left: 40px;
 }
 .card1:hover{
   background-color: #e1f9e2;
@@ -346,7 +351,7 @@ width: 100%;
   
 }
 .planicuroft{
-  margin-top: 14%;
+  margin-top: 2%;
   font-size: 23px;
   color: white;
 }
