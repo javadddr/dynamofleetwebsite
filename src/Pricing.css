@@ -18,26 +18,30 @@
 
   background: #0F0F47;
   backdrop-filter: blur(16px);
-  padding: 40px;
+  padding: 10px;
+  padding-top: 50px;
   display: flex;
   justify-content: space-between;
   font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 125vh;
+  flex: 2;
 }
 .disprichishode{
   color: white;
-  font-size: 19px;
-  margin-top: 180px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .checkm{
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .cards {
-  flex: 3;
+  flex: 2;
   display: flex;
+justify-content: flex-end;
 
-
-  margin: 15px 3%;
+  margin: 10px 0.5%;
   width: 100%;
 }
 .choosedfg{
@@ -47,7 +51,10 @@
 .topnote h1{
   color: blue;
   font-size: 26px;
+
 }
+
+
 .prititin1{
   display: flex;
   align-items: center;
@@ -122,7 +129,7 @@ margin-left: 10px;
   font-weight: bold;
 }
 .forfree button {
-  font-size: 14px;
+  font-size: 18px;
   padding: 8px 13px;
   background-color: #113b12;
   color: #fff;
@@ -132,7 +139,7 @@ margin-left: 10px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
   display: block; /* Ensure the button spans the width of the container */
-  width: 100%;
+  width: 200px;
   text-align: center;
 }
 .forfree1 button {
@@ -197,8 +204,9 @@ margin-left: 10px;
 .card1 {
   display: flex;
   flex-direction: column;
-height: 700px;
-  width: 34%;
+height: 750px;
+  width:350px;
+  min-width:350px;
   border: 1px solid black;
   padding: 20px;
   justify-content: space-evenly;
@@ -222,8 +230,8 @@ height: 700px;
 .topnote2{
   display: flex;
   flex-direction: column;
-  height: 20px;
-  font-size: 19px;
+  height: 1px;
+  font-size: 11px;
   justify-content: space-between;
 }
 .topnote21{
@@ -233,15 +241,15 @@ height: 700px;
 .actpri{
   display: flex;
   flex-direction: column;
-  height: 20%;
-  font-size: 19px;
+  height: 10%;
+  font-size: 14px;
   justify-content: space-between;
 }
 .actpri1{
   display: flex;
   flex-direction: column;
-  height: 4%;
-  font-size: 19px;
+  height: 10%;
+  font-size: 14px;
   justify-content: space-between;
 }
 
@@ -261,6 +269,10 @@ height: 700px;
     width: auto;
     margin: 10px auto; /* Center cards on smaller screens */
   }
+  .pmain2{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 
@@ -274,9 +286,76 @@ height: 700px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .1);
   
   }
+  .pmain2{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 768px) {
   .disprichishode{
     margin-top: 20px;
   }
+  .pmain2{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.planicon{
+  display: flex;
+  align-items: center;
+
+}
+.planicon span{
+  color: rgb(10, 10, 140);
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.planicon img{
+  margin-right: 10px;
+  width: 7%;
+}
+.planiconws span{
+  color: rgb(10, 10, 140);
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.planiconws{
+  margin-bottom: 20px;
+}
+.plaininfoford{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 6px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  height: 13%;
+  background-color: rgb(213, 246, 246);
+width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+ font-size: 13px;
+ 
+  
+}
+.planicuroft{
+  margin-top: 14%;
+  font-size: 23px;
+  color: white;
+}
+#justhdes{
+  padding-bottom: 30px;
+  
+}
+#justhdes1{
+  padding-bottom: 40px;
+  margin-top: 27px;
+
 }
