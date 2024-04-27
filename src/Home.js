@@ -21,7 +21,7 @@ function Home() {
           
             <h1>Stay ahead with advanced fleet management software.</h1>
             <p>DynamoChart is the ideal upgrade from outdated fleet management software, providing comprehensive solutions to manage both your vehicles and drivers.Enhance cost efficiency, and assume full control over your fleet management.</p>
-            <button className='bdmoma'>Book a demo</button>
+            {/* <button className='bdmoma'>Book a demo</button> */}
           </div>
           <div className='heropic'>
             <img src={hd} alt="Descriptive Alt Text" />

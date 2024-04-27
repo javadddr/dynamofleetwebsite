@@ -4,10 +4,11 @@ import "./Pricing.css"
 import Nav from './Nav'; // Importing Nav
 import Footer from './Footer'; // Importing Footer
 import dido from "./checkmark.png"
-import Slider from '@mui/material/Slider';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+
+import { Slider, Typography, Box, Tooltip } from '@mui/material';
+
 import { styled } from '@mui/material/styles';
+
 const pricingData = {
  
   "10": { monthly: "15,99", totalMonthly: "159", monthlyDiscount: "13,5", yearlyDiscount: "1620" },
@@ -43,10 +44,6 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
     '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
       boxShadow: `0px 0px 0px 8px ${theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.16)' : 'rgba(24, 118, 255, 0.16)'}`,
     },
-    '&.Mui-disabled': {
-      height: 24,
-      width: 24,
-    },
   },
   '& .MuiSlider-rail': {
     opacity: 0.28,
@@ -56,8 +53,7 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
 const Pricing = () => {
 
   const [capacity, setCapacity] = useState(0);
-  
- 
+
   const handleSliderChange = (event, newValue) => {
     setCapacity(newValue);
   };
@@ -65,7 +61,9 @@ const Pricing = () => {
   const bracketKey = findPricingBracket(capacity); 
   const selectedPricing = pricingData[bracketKey];
  
-
+  const valueLabelFormat = (value) => {
+    return value === 501 ? '500+' : value;
+  };
 
 
   return (
@@ -74,24 +72,26 @@ const Pricing = () => {
     <div className='pmain'>
       <div className='pmain2'>
         <div className='planandcut'>
-        <div className='disprichishode'>All of our plans include complete access to our platform. The only difference in pricing depends on how many vehicles you would like to manage using our platform.</div>
+
         <div className='rangvp'>
         How many vehicles would you like to manage?
         
-            <Box sx={{ width: '100%', paddingTop: '34px' }}>
-              <IOSSlider
-                aria-label="Vehicle Capacity"
-                defaultValue={30}
-                valueLabelDisplay="on"
-                step={1}
-                marks
-                min={0}
-                max={501}
-                value={capacity}
-                onChange={handleSliderChange}
-              />
-            </Box>
+        <Box sx={{ width: '100%',paddingTop:'40px' }}>
+                <IOSSlider
+                  aria-label="Vehicle Capacity"
+                  defaultValue={30}
+                  valueLabelDisplay="on"
+                  valueLabelFormat={valueLabelFormat}
+                  step={1}
+                  marks
+                  min={0}
+                  max={501}
+                  value={capacity}
+                  onChange={handleSliderChange}
+                />
+              </Box>
             </div>
+            <div className='disprichishode'>All of our plans include complete access to our platform. The only difference in pricing depends on how many vehicles you would like to manage using our platform.</div>
         <div className='planicuroft'>
         Your plan will be:
         </div>
@@ -182,7 +182,8 @@ const Pricing = () => {
           </div>
           <div className='forfree1'>
          
-  <button className='linkmainsdrr' >Upgrade Your Plan</button>
+          <button className='linkmainsdrr' onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>Create a Free Account</button>
+
 
 
 </div>
@@ -195,9 +196,9 @@ const Pricing = () => {
          
             <h1 id='justhdes'>Monthly</h1>
             <div className='prititin'>
-              {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthly !== "N/A" ? "\u0024" : ""}  {selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"}</span></h1><p>{selectedPricing.monthly !== "N/A" ? " Per vehicle /per month" : ""}</p></div>}
+              {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthly !== "N/A" ? "\u0024" : ""}  {selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"}</span></h1><p>{selectedPricing.monthly !== "N/A" ?capacity!==501? " Per vehicle /per month" : "":""}</p></div>}
               
-               <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {capacity* parseInt((selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"))}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>
+              {capacity!==501&& <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {capacity* parseInt((selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"))}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>}
               
                </div>
           
@@ -253,8 +254,9 @@ const Pricing = () => {
      
             </div>
           </div>
-          <div className='forfree'>
-          <button className='linkmainsdrr' >Upgrade Your Plan</button>
+          <div className='forfree1'>
+          <button className='linkmainsdrr' onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>Create a Free Account</button>
+
            
           </div>
           <div className="greenSquare"></div>
@@ -265,9 +267,9 @@ const Pricing = () => {
          
         <h1 id='justhdes'>Annually</h1>
          <div className='prititin'>
-           {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthlyDiscount !== "N/A" ? "\u0024" : ""} {selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"} </span></h1><p> {selectedPricing.monthlyDiscount !== "N/A" ? " Per vehicle /per month" : ""}</p></div>}
+           {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthlyDiscount !== "N/A" ? "\u0024" : ""} {selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"} </span></h1><p> {selectedPricing.monthlyDiscount !== "N/A" ?capacity!==501? " Per vehicle /per month" : "":""}</p></div>}
            
-            <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(capacity* parseInt(selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"))*12}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>
+           {capacity!==501&& <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(capacity* parseInt(selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"))*12}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>}
         
             </div>
        
@@ -325,8 +327,9 @@ const Pricing = () => {
             
           
           </div>
-          <div className='forfree'>
-          <button className='linkmainsdrr' >Upgrade Your Plan</button>
+          <div className='forfree1'>
+          <button className='linkmainsdrr' onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>Create a Free Account</button>
+
            
           </div>
           <div className="greenSquare"></div>

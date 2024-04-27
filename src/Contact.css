@@ -24,7 +24,7 @@ justify-content: center;
   justify-content: center;
 text-align: center;
 
-  height: 930px;
+  height: 760px;
   padding-bottom: 20px;
 
   
@@ -52,7 +52,7 @@ text-align: center;
   border-bottom-right-radius: 0;
   margin-bottom: 0;
   border-right: none;
-  font-size: 19px;
+  font-size: 15px;
 }
 .sewomi{
   flex: 1;
@@ -88,7 +88,7 @@ height: 80vh;
 }
 .thead p{
 color: black;
-font-size: 22px;
+font-size: 18\7px;
 font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
 .Address,
@@ -103,7 +103,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   flex-direction: column;
   background-color: #FFFFFF;
   border: 1px solid #656464;
-  height: 100px;
+  height: 80px;
   margin-top: 20px;
   border-bottom: none;
   width: 80%;
@@ -116,7 +116,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   flex-direction: column;
   background-color: #FFFFFF;
   border: 1px solid #656464;
-  height: 100px;
+  height: 80px;
   margin-top: 15px;
   border-bottom: none;
   width: 80%;
@@ -128,7 +128,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   flex-direction: column;
   background-color: #FFFFFF;
   border: 1px solid #656464;
-  height: 100px;
+  height: 80px;
   margin-top: 15px;
   border-bottom: none;
   width: 80%;
@@ -140,7 +140,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   flex-direction: column;
   background-color: #FFFFFF;
   border: 1px solid #656464;
-  height: 250px;
+  height: 190px;
   margin-top: 15px;
   border-bottom: none;
   width: 80%;
@@ -177,7 +177,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   border-right: none;
 }
 .input41{
-  min-height: 200px;
+  min-height:150px;
   display: flex;
   border: 1px solid #e6e6e6;
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -194,7 +194,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 .namei{
   display: flex;
-  height: 50px;
+  height: 40px;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -214,9 +214,9 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-font-size: 18px;
-  width: 300px;
-  height: 50px;
+font-size: 14px;
+  width: 150px;
+  height: 35px;
   
 }
 
@@ -266,7 +266,7 @@ button:disabled {
     width: 100%;
     display: block;
     
-    font-size: 30px;
+    font-size: 23px;
     color: #333;
    font-family:'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
@@ -319,7 +319,7 @@ button:disabled {
   display: flex;
   justify-content:center;
   align-items:center;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 @media (max-width: 768px) {
