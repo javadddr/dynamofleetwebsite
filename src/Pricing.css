@@ -20,7 +20,7 @@
   background: #0F0F47;
   backdrop-filter: blur(16px);
   padding: 10px;
-  padding-top: 50px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -363,4 +363,34 @@ width: 100%;
   padding-bottom: 40px;
   margin-top: 27px;
 
+}
+#discount-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #086229; 
+  color: rgb(255, 255, 255); 
+  font-size: 11px; 
+  padding: 5px 5px; 
+  border-radius: 10%; 
+  position: absolute; 
+  top: 14%;               
+  right: 37%;         
+ width: 66px;
+ height: 20px;
+ font-family:'inter','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transform: translate(50%, -50%);
+  z-index: 10;  
+  border: 1px solid black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+}
+.bannerpricingo{
+  background-color: #086229;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  height: 40px;
+  color: white;
+  font-family:'inter','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

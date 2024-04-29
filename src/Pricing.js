@@ -11,17 +11,17 @@ import { styled } from '@mui/material/styles';
 
 const pricingData = {
  
-  "10": { monthly: "15,99", totalMonthly: "159", monthlyDiscount: "13,5", yearlyDiscount: "1620" },
-  "30": { monthly: "14,99", totalMonthly: "449", monthlyDiscount: "12,7", yearlyDiscount: "4572" },
-  "50": { monthly: "13,99", totalMonthly: "699", monthlyDiscount: "11,8", yearlyDiscount: "7080" },
-  "70": { monthly: "12,99", totalMonthly: "909", monthlyDiscount: "11", yearlyDiscount: "9240" },
-  "100": { monthly: "11,99", totalMonthly: "1199", monthlyDiscount: "10,1", yearlyDiscount: "12120" },
-  "150": { monthly: "10,99", totalMonthly: "1648", monthlyDiscount: "9,3", yearlyDiscount: "16740" },
-  "200": { monthly: "9,99", totalMonthly: "1998", monthlyDiscount: "8,4", yearlyDiscount: "20160" },
-  "250": { monthly: "8,99", totalMonthly: "2247", monthlyDiscount: "7,6", yearlyDiscount: "22800" },
-  "300": { monthly: "7,99", totalMonthly: "2397", monthlyDiscount: "6,7", yearlyDiscount: "24120" },
-  "400": { monthly: "6,99", totalMonthly: "2796", monthlyDiscount: "5,9", yearlyDiscount: "28320" },
-  "500": { monthly: "5,99", totalMonthly: "2995", monthlyDiscount: "5", yearlyDiscount: "30000" },
+  "10": { monthly: "15.99", totalMonthly: "159", monthlyDiscount: "13.5", yearlyDiscount: "1620" },
+  "30": { monthly: "14.99", totalMonthly: "449", monthlyDiscount: "12.7", yearlyDiscount: "4572" },
+  "50": { monthly: "13.99", totalMonthly: "699", monthlyDiscount: "11.8", yearlyDiscount: "7080" },
+  "70": { monthly: "12.99", totalMonthly: "909", monthlyDiscount: "11", yearlyDiscount: "9240" },
+  "100": { monthly: "11.99", totalMonthly: "1199", monthlyDiscount: "10.1", yearlyDiscount: "12120" },
+  "150": { monthly: "10.99", totalMonthly: "1648", monthlyDiscount: "9.3", yearlyDiscount: "16740" },
+  "200": { monthly: "9.99", totalMonthly: "1998", monthlyDiscount: "8.4", yearlyDiscount: "20160" },
+  "250": { monthly: "8.99", totalMonthly: "2247", monthlyDiscount: "7.6", yearlyDiscount: "22800" },
+  "300": { monthly: "7.99", totalMonthly: "2397", monthlyDiscount: "6.7", yearlyDiscount: "24120" },
+  "400": { monthly: "6.99", totalMonthly: "2796", monthlyDiscount: "5.9", yearlyDiscount: "28320" },
+  "500": { monthly: "5.99", totalMonthly: "2995", monthlyDiscount: "5", yearlyDiscount: "30000" },
   "500+": { monthly: "Contact Us", totalMonthly: "Contact Us", monthlyDiscount: "Contact Us", yearlyDiscount: "Contact Us" }
 };
 const findPricingBracket = (capacity) => {
@@ -60,7 +60,15 @@ const Pricing = () => {
 
   const bracketKey = findPricingBracket(capacity); 
   const selectedPricing = pricingData[bracketKey];
- 
+  const numericPricing = parseFloat(selectedPricing.monthly);
+  const numericPricing2 = parseFloat(capacity);
+  const numericPricingyear = parseFloat(selectedPricing.monthlyDiscount);
+
+
+ const payMonthly = (numericPricing2 * numericPricing).toFixed(0);
+ const payYealy = (numericPricing2 * numericPricingyear).toFixed(0)*12;
+ console.log(payMonthly)
+ console.log(payYealy)
   const valueLabelFormat = (value) => {
     return value === 501 ? '500+' : value;
   };
@@ -70,7 +78,9 @@ const Pricing = () => {
    <div>
     <Nav/>
     <div className='pmain'>
+    <div className='bannerpricingo'>All prices include a 10% discount. Take advantage of this discount across all our pricing options!</div>
       <div className='pmain2'>
+      
         <div className='planandcut'>
 
         <div className='rangvp'>
@@ -198,7 +208,7 @@ const Pricing = () => {
             <div className='prititin'>
               {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthly !== "N/A" ? "\u0024" : ""}  {selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"}</span></h1><p>{selectedPricing.monthly !== "N/A" ?capacity!==501? " Per vehicle /per month" : "":""}</p></div>}
               
-              {capacity!==501&& <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {capacity* parseInt((selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"))}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>}
+              {capacity!==501&& <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {parseInt((payMonthly !== "N/A" ? payMonthly : "Select the range"))}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>}
               
                </div>
           
@@ -263,13 +273,13 @@ const Pricing = () => {
           <div className="greenSquare2"></div>
         </div>
         <div className='card1'>
-        <div className='topnote'>
-         
-        <h1 id='justhdes'>Annually</h1>
+        <div className='topnote' style={{ position: 'relative' }}>
+  <h1 id='justhdes'>Annually</h1>
+  <span id="discount-circle">SAVE 15%</span>
          <div className='prititin'>
            {capacity!==0&&<div className='prititin1'> <h1><span>{selectedPricing.monthlyDiscount !== "N/A" ? "\u0024" : ""} {selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"} </span></h1><p> {selectedPricing.monthlyDiscount !== "N/A" ?capacity!==501? " Per vehicle /per month" : "":""}</p></div>}
            
-           {capacity!==501&& <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(capacity* parseInt(selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"))*12}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>}
+           {capacity!==501&& <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(selectedPricing.monthlyDiscount !== "N/A" ? payYealy : "Select the range")}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>}
         
             </div>
        

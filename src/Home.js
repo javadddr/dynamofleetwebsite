@@ -20,12 +20,34 @@ function Home() {
           <div className='herotext'>
           
             <h1>Stay ahead with advanced fleet management software.</h1>
-            <p>DynamoChart is the ideal upgrade from outdated fleet management software, providing comprehensive solutions to manage both your vehicles and drivers.Enhance cost efficiency, and assume full control over your fleet management.</p>
+            <p>DynamoFleet is the ideal upgrade from outdated fleet management software, providing comprehensive solutions to manage both your vehicles and drivers.Enhance cost efficiency, and assume full control over your fleet management.</p>
             {/* <button className='bdmoma'>Book a demo</button> */}
           </div>
           <div className='heropic'>
             <img src={hd} alt="Descriptive Alt Text" />
           </div>
+        </div>
+        <div className='driversstatusioo'>
+       <div className='justforcenterflex'>
+        <div className='texfordfdroo'>DynamoFleet is a comprehensive fleet management application that enables you to effectively manage, control, and monitor your entire fleet. </div>
+        </div>
+     
+      
+        <div className='picordfdr'>
+          <iframe 
+            width="1028" 
+            height="578" 
+            src="https://www.youtube.com/embed/YznShgTBRog" 
+            title="Stay ahead with DynamoFleet, an advanced fleet management software." 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        
+
         </div>
         <div className='gifveh'>
           <div className='textofgif'>
