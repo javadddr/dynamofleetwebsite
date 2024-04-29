@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 import './Contact.css';
 import senti  from "./sent.png"
 const Contact = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [first_name, setFirstName] = useState('');
+  const [last_name, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phone, setPhoneNumber] = useState('');
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,7 @@ const Contact = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
   
-    if (!firstName || !lastName || !email || !message) {
+    if (!first_name || !last_name || !email || !message) {
      
       return;
     }
@@ -26,10 +26,10 @@ const Contact = () => {
   
     setTimeout(() => {
     const customerMessage = {
-      firstName,
-      lastName,
+      first_name,
+      last_name,
       email,
-      phoneNumber,
+      phone,
       company,
       message,
     };
@@ -37,10 +37,11 @@ const Contact = () => {
       console.log(customerMessage);
   
       
-      fetch('https://api.globalpackagetracker.com/contact', {
+      fetch('https://billing.dynamofleet.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'key': process.env.REACT_APP_EMAIL_KEY, 
       },
       body: JSON.stringify(customerMessage),
     })
@@ -88,14 +89,14 @@ const Contact = () => {
                     <div className='input1'>
                       <input
                         type="text"
-                        value={firstName}
+                        value={first_name}
                         onChange={(e) => setFirstName(e.target.value)}
                         placeholder="First Name"
                         className='input11'
                       />
                       <input
                         type="text"
-                        value={lastName}
+                        value={last_name}
                         onChange={(e) => setLastName(e.target.value)}
                         placeholder="Last Name"
                         className='input12'
@@ -117,7 +118,7 @@ const Contact = () => {
                     <label className='namei'>ENTER PHONE NUMBER</label>
                     <input
                       type="tel"
-                      value={phoneNumber}
+                      value={phone}
                       onChange={(e) => setPhoneNumber(e.target.value)}
                       className='input31'
                       placeholder="Eg. +1 800 000000"
