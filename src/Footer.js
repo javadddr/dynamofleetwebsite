@@ -25,7 +25,7 @@ function Footer() {
         <p>Sitz der Gesellschaft/Registered office:<span> Neuss</span></p>
         <p>Eintragung/Commercial Register:<span> Amtsgericht Neuss HRB 23027</span></p>
         <p>VAT identification number (USt-ID):<span> DE361618143</span></p>
-        <p>Geschäftsführung/Managing Directors:<span> Javad Khalil Arjmandi</span></p>
+        <p>Geschäftsführung/Managing Directors:<span><br></br> Javad Khalil Arjmandi<br></br>Johannes Hendrik Frederik Kist</span></p>
       </div>
     </footer>
   );
