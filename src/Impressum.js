@@ -13,7 +13,7 @@ function Impressum() {
 
 <p>DynamoChart UG Holzheimer Weg 11 41464 Neuss</p>
 
-<p>Kontakt: Telefon: +49 1515 6338464 E-Mail: hello@dyamofleet.com Gesch&auml;ftsf&uuml;hrer: Javad Khalil Arjmandi</p>
+<p>Kontakt: Telefon: +49 1515 6338464 E-Mail: hello@dyamofleet.com Gesch&auml;ftsf&uuml;hrer: <br></br>Javad Khalil Arjmandi<br></br>Johannes Hendrik Frederik Kist</p>
 
 <p>&#8205;Registereintrag: Eintragung im Handelsregister. Registergericht: Neuss Registernummer: HRB 23027 USt.-Id: DE361618143</p>
 
