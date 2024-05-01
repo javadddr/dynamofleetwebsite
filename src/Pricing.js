@@ -78,7 +78,7 @@ const Pricing = () => {
    <div>
     <Nav/>
     <div className='pmain'>
-    <div className='bannerpricingo'>All prices include a 10% discount. Take advantage of this discount across all our pricing options!</div>
+    <div className='bannerpricingo'>All prices include a 20% discount. Take advantage of this discount across all our pricing options!</div>
       <div className='pmain2'>
       
         <div className='planandcut'>
