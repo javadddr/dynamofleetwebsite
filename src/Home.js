@@ -147,7 +147,7 @@ function Home() {
           
             <h1 >Manage your fines, create and assign equipment, define operational areas</h1>
             <p>Efficiently manage your fines, create and assign equipment to vehicles and drivers, define operational areas, and monitor your fleet based on these designated zones.</p>
-            <button className='bdmoma'>Book a demo</button>
+            {/* <button className='bdmoma'>Book a demo</button> */}
           </div>
           <div className='heropico'>
             <img src={finpp} alt="Descriptive Alt Text" />
