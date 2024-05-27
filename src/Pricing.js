@@ -67,8 +67,7 @@ const Pricing = () => {
 
  const payMonthly = (numericPricing2 * numericPricing).toFixed(0);
  const payYealy = (numericPricing2 * numericPricingyear).toFixed(0)*12;
- console.log(payMonthly)
- console.log(payYealy)
+ 
   const valueLabelFormat = (value) => {
     return value === 501 ? '500+' : value;
   };
