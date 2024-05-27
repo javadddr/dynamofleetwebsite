@@ -82,9 +82,9 @@ const Pricing = () => {
         body: JSON.stringify({ actionName }),
       });
       if (response.ok) {
-        console.log('Action logged successfully');
+      
       } else {
-        console.error('Failed to log action');
+       
       }
     } catch (error) {
       console.error('Error:', error);

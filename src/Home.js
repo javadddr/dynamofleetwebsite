@@ -25,14 +25,13 @@ function Home() {
           body: JSON.stringify({ actionName: 'homeVisit' }),
         });
         if (response.ok) {
-          console.log('Home visit logged successfully');
-          // Mark the visit as logged in local storage
+        
           localStorage.setItem('homeVisitLogged', true);
         } else {
-          console.error('Failed to log home visit');
+         
         }
       } else {
-        console.log('Home visit already logged');
+       
       }
     } catch (error) {
       console.error('Error:', error);
