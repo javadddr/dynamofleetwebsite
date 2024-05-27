@@ -72,8 +72,24 @@ const Pricing = () => {
   const valueLabelFormat = (value) => {
     return value === 501 ? '500+' : value;
   };
-
-
+  const trackAction = async (actionName) => {
+    try {
+      const response = await fetch('https://api.dynamofleet.com/dywebsite/trackAction', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ actionName }),
+      });
+      if (response.ok) {
+        console.log('Action logged successfully');
+      } else {
+        console.error('Failed to log action');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   return (
    <div>
     <Nav/>
@@ -192,8 +208,8 @@ const Pricing = () => {
             </div>
           </div>
           <div className='forfree1'>
-         
-          <button className='linkmainsdrr' onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>Create a Free Account</button>
+          <button className='linkmainsdrr' onClick={() => { trackAction('Create a Free Account Pricing Page-No Billing'); window.location.href = 'https://www.app.dynamofleet.com/register'; }}>Create a Free Account</button>
+        
 
 
 
@@ -266,7 +282,8 @@ const Pricing = () => {
             </div>
           </div>
           <div className='forfree1'>
-          <button className='linkmainsdrr' onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>Create a Free Account</button>
+          <button className='linkmainsdrr' onClick={() => { trackAction('Create a Free Account Pricing Page-Monthly'); window.location.href = 'https://www.app.dynamofleet.com/register'; }}>Create a Free Account</button>
+
 
            
           </div>
@@ -339,7 +356,7 @@ const Pricing = () => {
           
           </div>
           <div className='forfree1'>
-          <button className='linkmainsdrr' onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>Create a Free Account</button>
+          <button className='linkmainsdrr' onClick={() => { trackAction('Create a Free Account Pricing Page-Annually'); window.location.href = 'https://www.app.dynamofleet.com/register'; }}>Create a Free Account</button>
 
            
           </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from './Nav'; // Importing Nav
 import Footer from './Footer'; // Importing Footer
 import './Home.css';
@@ -11,6 +11,37 @@ import nbad from "./nbad.png"
 import finpp from "./finpp.png"
 function Home() {
  
+ useEffect(() => {
+  const trackHomeVisit = async () => {
+    try {
+      // Check if the visit has already been logged
+      const isVisitLogged = localStorage.getItem('homeVisitLogged');
+      if (!isVisitLogged) {
+        const response = await fetch('https://api.dynamofleet.com/dywebsite/trackAction', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ actionName: 'homeVisit' }),
+        });
+        if (response.ok) {
+          console.log('Home visit logged successfully');
+          // Mark the visit as logged in local storage
+          localStorage.setItem('homeVisitLogged', true);
+        } else {
+          console.error('Failed to log home visit');
+        }
+      } else {
+        console.log('Home visit already logged');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  // Call the trackHomeVisit function when the Home component mounts
+  trackHomeVisit();
+}, []);
 
   return (
     <div>
