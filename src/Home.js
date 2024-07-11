@@ -9,6 +9,10 @@ import cost from "./cofwas.png"
 import df from "./df.png"
 import nbad from "./nbad.png"
 import finpp from "./finpp.png"
+import track1 from "./truck1.gif"
+import analytics from "./analytics.gif"
+import dossier from "./dossier.gif"
+
 function Home() {
  
  useEffect(() => {
@@ -49,9 +53,51 @@ function Home() {
         <div className='HeroHomegg'>
           <div className='herotext'>
           
-            <h1>Stay ahead with advanced fleet management software.</h1>
+            <h1>Stay ahead with advanced <br></br><span>fleet management</span> software.</h1>
             <p>DynamoFleet is the ideal upgrade from outdated fleet management software, providing comprehensive solutions to manage both your vehicles and drivers.Enhance cost efficiency, and assume full control over your fleet management.</p>
-            {/* <button className='bdmoma'>Book a demo</button> */}
+            
+            <div className="animated-content fade-in">
+            
+            <img src={track1} alt="Truck animation" style={{ width: '15%',marginRight:"3%"}} />
+            <h2>Manage your vehicles.</h2>
+            </div>
+            <div className="animated-content fade-in">
+            
+            <img src={dossier} alt="Truck animation" style={{ width: '15%',marginRight:"3%"}} />
+            <h2>Manage your drivers.</h2>
+            </div>
+            <div className="animated-content fade-in">
+            
+            <img src={analytics} alt="Truck animation" style={{ width: '15%',marginRight:"3%" }} />
+            <h2>Oversee your entire fleet!</h2>
+           
+
+            </div>
+            <div className="animated-content1 fade-in">
+            <div className="manage-items">
+             
+             <ul className="checklistW">
+               <li>Equipments</li>
+               <li>Fines</li>
+               <li>Driver Licenses</li>
+             </ul>
+             <ul className="checklistW">
+              
+               <li>Inspections</li>
+               <li>Accidents</li>
+               <li>Sickness</li>
+             </ul>
+             </div>
+           </div>
+            <div className="animated-content1 fade-in">
+
+            <button 
+              className='bdmoma' 
+              onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}
+            >
+              Register for free
+            </button>
+            </div>
           </div>
           <div className='heropic'>
             <img src={hd} alt="Descriptive Alt Text" />
