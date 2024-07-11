@@ -282,12 +282,44 @@ flex: 2;
     
   }
   
-  .herotext{
+  .herotext {
     padding-left: 10px;
     color: black;
+    background: 
+      url('./Vector1.png') no-repeat center center, 
+      url('./Vector2.png') no-repeat 310px -280px; /* Adjusted position for Vector2.png */
+    background-size: cover, cover;
+    background-blend-mode: overlay; /* Optional: Adjust blend mode if needed */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .herotext::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('./Vector1.png') no-repeat center center;
     background-size: cover;
+    transform: rotate(180deg);
+    z-index: -1;
   }
+  
+  .herotext::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Vector2.png') no-repeat 20px -30px; /* Adjusted position for Vector2.png */
+    background-size: cover;
+    z-index: -2;
+  }
+  
+
   .herotext h1 span{
    
     color: rgb(222, 144, 144);
@@ -295,6 +327,8 @@ flex: 2;
   .herotext h1{
    font-size: 40px;
     color: black;
+    font-weight: 600;
+    font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   .herotext h2{
     font-size: 17px;
