@@ -13,6 +13,7 @@ import track1 from "./truck1.gif"
 import analytics from "./analytics.gif"
 import dossier from "./dossier.gif"
 
+
 function Home() {
  
  useEffect(() => {
@@ -52,23 +53,24 @@ function Home() {
       <div className='homemain'>
         <div className='HeroHomegg'>
           <div className='herotext'>
-          
+          <div className="animated-content fade-in2">
             <h1>Stay ahead with advanced <br></br><span>fleet management</span> software.</h1>
+            </div>
             <p>DynamoFleet is the ideal upgrade from outdated fleet management software, providing comprehensive solutions to manage both your vehicles and drivers.Enhance cost efficiency, and assume full control over your fleet management.</p>
             
             <div className="animated-content fade-in">
             
-            <img src={track1} alt="Truck animation" style={{ width: '15%',marginRight:"3%"}} />
+            <img src={track1} alt="Truck animation" style={{ width: '10%',marginRight:"3%",borderRadius:"20px"}} />
             <h2>Manage your vehicles.</h2>
             </div>
             <div className="animated-content fade-in">
             
-            <img src={dossier} alt="Truck animation" style={{ width: '15%',marginRight:"3%"}} />
+            <img src={dossier} alt="Truck animation" style={{ width: '10%',marginRight:"3%",borderRadius:"20px"}} />
             <h2>Manage your drivers.</h2>
             </div>
             <div className="animated-content fade-in">
             
-            <img src={analytics} alt="Truck animation" style={{ width: '15%',marginRight:"3%" }} />
+            <img src={analytics} alt="Truck animation" style={{ width: '10%',marginRight:"3%",borderRadius:"20px" }} />
             <h2>Oversee your entire fleet!</h2>
            
 
@@ -90,13 +92,10 @@ function Home() {
              </div>
            </div>
             <div className="animated-content1 fade-in">
-
-            <button 
-              className='bdmoma' 
-              onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}
-            >
-              Register for free
-            </button>
+      
+            <button class="btn"  onClick={() => window.location.href = 'https://www.app.dynamofleet.com/register'}>
+            Register for free
+           </button>
             </div>
           </div>
           <div className='heropic'>
