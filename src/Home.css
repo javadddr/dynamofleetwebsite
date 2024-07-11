@@ -28,6 +28,7 @@
   padding-left: 60px;
 
 }
+
 .herotext h1{
   color: rgb(255, 255, 255);
   letter-spacing: -.1rem;
@@ -280,6 +281,9 @@ flex: 2;
     margin-bottom: 0px;
 
     
+  }
+  .justtitrhid{
+    display: none;
   }
   
   .herotext {

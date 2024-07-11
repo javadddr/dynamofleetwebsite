@@ -53,6 +53,9 @@ function Home() {
       <div className='homemain'>
         <div className='HeroHomegg'>
           <div className='herotext'>
+            <div className='justtitrhid'>
+          <h1>Stay ahead with advanced <br></br><span>fleet management</span> software.</h1>
+          </div>
           <div className="animated-content fade-in2">
             <h1>Stay ahead with advanced <br></br><span>fleet management</span> software.</h1>
             </div>
