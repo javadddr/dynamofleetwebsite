@@ -40,7 +40,9 @@ function Nav() {
         &#9776;
       </button>
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        {/* Added onClick to each Link to close the menu upon clicking */}
+        <div style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
+      <img src={logo} alt="DynamoFleet logo" style={{width:"20%"}} className='logoforhamber' />
+      </div>
         <Link to="/" className="nav-link" onClick={() => { closeMenu(); trackAction('Home'); }}>Home</Link>
         <Link to="/pricing" className="nav-link" onClick={() => { closeMenu(); trackAction('Pricing'); }}>Pricing</Link>
         <Link to="/contact" className="nav-link" onClick={() => { closeMenu(); trackAction('Contact'); }}>Contact</Link>

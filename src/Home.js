@@ -107,14 +107,13 @@ function Home() {
         </div>
         <div className='driversstatusioo'>
        <div className='justforcenterflex'>
-        <div className='texfordfdroo'>DynamoFleet is a comprehensive fleet management application that enables you to effectively manage, control, and monitor your entire fleet. </div>
+        <div className='texfordfdroo fade-in2'>DynamoFleet is a comprehensive fleet management application that enables you to effectively manage, control, and monitor your entire fleet. </div>
         </div>
      
       
         <div className='picordfdr'>
           <iframe 
-            width="1028" 
-            height="578" 
+           
             src="https://www.youtube.com/embed/YznShgTBRog" 
             title="Stay ahead with DynamoFleet, an advanced fleet management software." 
             frameBorder="0" 

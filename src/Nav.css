@@ -6,6 +6,9 @@ html, body {
   padding: 0;
   width: 100%;
 }
+.logoforhamber{
+  display: none;
+}
 .logo {
   height: 30px; 
   width: auto;
@@ -118,7 +121,10 @@ font-size: 14px;
     right: 20px;
     top: 15px;
   }
-
+  .logoforhamber{
+    display: flex;
+  }
+ 
   .nav-links {
     flex-direction: column;
     position: fixed;
@@ -136,15 +142,19 @@ font-size: 14px;
   .nav-links.open {
     width: 100%; 
     justify-content: center;
+    z-index: 3000;
   }
 
   .nav-link {
+    display: flex;
     text-align: center;
-    padding: 10px;
-    width: 100%;
+    align-items: center;
+    padding: 15px;
+
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s; 
+   
   }
 
   .nav-links.open .nav-link {
